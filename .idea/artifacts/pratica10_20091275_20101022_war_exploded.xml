@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="pratica10_20091275_20101022:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/pratica10_20091275_20101022_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="pratica10_20091275_20101022/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="pratica10_20091275_20101022" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Vaadin Server" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
