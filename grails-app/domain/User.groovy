@@ -2,6 +2,7 @@ class User {
 
     String firstname
     String lastname
+    String mail
     String username
     String password
 

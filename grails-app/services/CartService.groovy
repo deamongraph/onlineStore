@@ -19,7 +19,7 @@ class CartService {
     }
 
     public void deleteProduct(String username, String productname){
-        def cart = User.findByUsername(username).cart
+        def cart = User.findByUsername(username).cartAppController
         cart.products.remove(Product.findByName(productname))
         cart.save(flush: true)
     }
