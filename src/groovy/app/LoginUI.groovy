@@ -6,6 +6,8 @@ import com.vaadin.server.VaadinRequest
 import com.vaadin.shared.ui.MarginInfo
 import com.vaadin.ui.*
 import com.vaadin.ui.themes.Reindeer
+import domains.User
+import services.UserService
 import sun.awt.HorizBagLayout
 import sun.awt.VerticalBagLayout
 
@@ -13,18 +15,21 @@ import sun.awt.VerticalBagLayout
  * Created by frangel on 31/10/14.
  */
 @Theme("valo")
-class MyUI extends UI {
+class LoginUI extends UI {
    // public final static String USUARIO_LOGEADO="USUARIO_LOGEADO";
-
+    TextField usuario;
+    PasswordField password;
     Button loginButton = new Button("Login",new Button.ClickListener() {
 
         @Override
         public void buttonClick(Button.ClickEvent event) {
+            String user = usuario.value;
+            String pass = password.value;
+            if(User.findByUsernameAndPassword(user, pass))
+                println("Autentificado: "+user);
 
-            // logout the user
-            getSession().setAttribute("user", null);
-            // Refresh this view, should redirect to login view
-          //  getUI().getNavigator().navigateTo(NAME);
+            // getSession().setAttribute("user", null);
+
         }
     });
 
@@ -47,9 +52,9 @@ class MyUI extends UI {
 
 
         // campos del login de usuario
-        TextField usuario = new TextField("Usuario: ")
+       usuario = new TextField("Usuario: ")
         usuario.setRequired(true)
-        PasswordField password = new PasswordField("Contraseña: ")
+        password = new PasswordField("Contraseña: ")
         password.setRequired(true)
         //botones
 

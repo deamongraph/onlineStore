@@ -1,3 +1,5 @@
+package domains
+
 class UserType {
 
     String type

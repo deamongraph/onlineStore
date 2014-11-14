@@ -7,7 +7,7 @@ class AppController {
 
     def index() {
         println("Redireccionando a Vaadin..")
-        redirect(uri: "/vd/");
+        redirect(uri: "/login/");
     }
 
     /**

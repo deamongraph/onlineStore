@@ -1,3 +1,7 @@
+package services
+
+import domains.User
+import domains.UserType
 import grails.transaction.Transactional
 
 @Transactional
@@ -18,8 +22,8 @@ class UserService {
         user.save(flush: true)
     }
 
-    public void create(String firstname, String lastname, String username, String password, String type){
-        def user = new User(firstname: firstname, lastname: lastname,
+    public void create(String firstname, String lastname,String mail, String username, String password, String type){
+        def user = new User(firstname: firstname, lastname: lastname,mail: mail,
                 username: username, password: password,
                 usertype: [new UserType(type: type)]).save(flush: true)
     }

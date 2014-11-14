@@ -1,3 +1,5 @@
+package domains
+
 class Picture {
 
     String path

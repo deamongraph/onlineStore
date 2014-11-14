@@ -1,3 +1,5 @@
+package domains
+
 class User {
 
     String firstname

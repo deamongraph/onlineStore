@@ -1,3 +1,5 @@
+package domains
+
 class Cart {
 
     Date date

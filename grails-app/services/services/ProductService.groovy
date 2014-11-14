@@ -1,3 +1,6 @@
+package services
+
+import domains.Product
 import grails.transaction.Transactional
 
 @Transactional
