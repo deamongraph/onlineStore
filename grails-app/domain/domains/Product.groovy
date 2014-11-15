@@ -5,7 +5,7 @@ class Product {
     String name
     String description
     Integer availables
-    Double price
+    Float price
 
     static hasMany = [pictures: Picture]
 
@@ -14,6 +14,7 @@ class Product {
         description nullable: true
         availables nullable: false
         price nullable: false
-        pictures nullable: false
+        pictures nullable: true
+
     }
 }

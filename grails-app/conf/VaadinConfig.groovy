@@ -4,7 +4,8 @@ vaadin {
     // The application will be available at e.g. http://localhost:8080/grails-vaadin7-demo/
     mapping = [
             "/login/*": "app.LoginUI",
-            "/user/*": "app.RegisterUI"
+            "/user/*": "app.RegisterUI",
+            "/products/show": "app.ShowProductsUI",
     ]
 
     // Extra mapping in case you need 'reserve' a URL and it shouldn't be mapped to e.g. /* by Vaadin

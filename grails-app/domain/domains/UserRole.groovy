@@ -1,6 +1,6 @@
 package domains
 
-class UserType {
+class UserRole {
 
     String type
 

@@ -142,6 +142,16 @@
 </init-param>
     </servlet>
 <servlet>
+<servlet-name>VaadinServlet 2</servlet-name>
+<servlet-class>com.vaadin.grails.GrailsVaadinServlet</servlet-class>
+<init-param>
+<description>Vaadin UI class</description>
+<param-name>UI</param-name>
+<param-value>app.ShowProductsUI</param-value>
+</init-param>
+<load-on-startup>1</load-on-startup>
+</servlet>
+<servlet>
 <servlet-name>VaadinServlet 1</servlet-name>
 <servlet-class>com.vaadin.grails.GrailsVaadinServlet</servlet-class>
 <init-param>
@@ -173,6 +183,10 @@
 <servlet-mapping>
 <servlet-name>VaadinServlet 0</servlet-name>
 <url-pattern>/VAADIN/*</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>VaadinServlet 2</servlet-name>
+<url-pattern>/products/show</url-pattern>
 </servlet-mapping>
 <servlet-mapping>
 <servlet-name>VaadinServlet 1</servlet-name>

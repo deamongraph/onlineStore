@@ -9,8 +9,8 @@ class User {
     String password
 
     static hasOne = [cart: Cart]
-    static belongsTo = [UserType]
-    static hasMany = [usertype: UserType]
+    static belongsTo = [UserRole]
+    static hasMany = [usertype: UserRole]
 
     static constraints = {
         firstname blank: false

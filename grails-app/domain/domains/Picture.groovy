@@ -7,6 +7,7 @@ class Picture {
     static hasOne = [product: Product]
 
     static constraints = {
-        path nullable: false, unique: true
+        path nullable: false
+        product nullable: true
     }
 }
